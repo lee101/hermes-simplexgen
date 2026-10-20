@@ -1,0 +1,42 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "simplexgen",
+  "version": "0.1.0",
+  "description": "Generate images and 3D meshes, then simplify, repair, voxelize, texture and search them with SimplexGen's hosted MCP server.",
+  "author": {
+    "name": "Lee Penkman",
+    "url": "https://github.com/lee101"
+  },
+  "homepage": "https://simplexgen.com",
+  "repository": "https://github.com/lee101/hermes-simplexgen",
+  "license": "MIT",
+  "keywords": [
+    "3d",
+    "mesh",
+    "text-to-3d",
+    "image-to-3d",
+    "simplify",
+    "glb",
+    "game-assets",
+    "mcp",
+    "skills"
+  ],
+  "extensions": {
+    "com.nousresearch.hermes": {
+      "config_schema": {
+        "api_key": {
+          "type": "secret",
+          "env": "SIMPLEXGEN_API_KEY",
+          "label": "SimplexGen API key",
+          "description": "Create one under Account > API at https://simplexgen.com/account (paid plan)."
+        }
+      },
+      "servers": {
+        "simplexgen": {
+          "trust": "untrusted",
+          "timeout": 900
+        }
+      }
+    }
+  }
+}

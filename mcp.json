@@ -1,0 +1,12 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/mcp.schema.json",
+  "mcpServers": {
+    "simplexgen": {
+      "type": "streamable-http",
+      "url": "https://simplexgen.com/mcp",
+      "headers": {
+        "Authorization": "Bearer ${SIMPLEXGEN_API_KEY}"
+      }
+    }
+  }
+}
