@@ -2,7 +2,7 @@
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "simplexgen",
   "version": "0.2.0",
-  "description": "Generate images and 3D meshes, then simplify, repair, voxelize, texture and search them with SimplexGen's hosted MCP server.",
+  "description": "Free local 3D mesh tools (inspect and defect report, repair, simplify, convert, transform, voxelize, preview, primitives, Blender ops) that work with no account, plus SimplexGen's hosted MCP server for AI 3D generation, texturing, retopo and UV charts when you add an API key.",
   "author": {
     "name": "Lee Penkman",
     "url": "https://github.com/lee101"
@@ -12,14 +12,18 @@
   "license": "MIT",
   "keywords": [
     "3d",
-    "mesh",
-    "text-to-3d",
-    "image-to-3d",
-    "simplify",
-    "glb",
+    "blender",
+    "free",
     "game-assets",
+    "glb",
+    "image-to-3d",
+    "local",
     "mcp",
-    "skills"
+    "mesh",
+    "mesh-repair",
+    "simplify",
+    "skills",
+    "text-to-3d"
   ],
   "extensions": {
     "com.nousresearch.hermes": {
@@ -35,6 +39,9 @@
         "simplexgen": {
           "trust": "untrusted",
           "timeout": 900
+        },
+        "simplexgen-local": {
+          "timeout": 600
         }
       }
     }

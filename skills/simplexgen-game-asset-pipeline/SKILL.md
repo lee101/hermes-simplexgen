@@ -58,3 +58,11 @@ Summarise per asset: source tool, face counts per LOD, files written, credits
 spent (from `credits_remaining` deltas). GLB imports directly into Godot,
 three.js, Blender and Unreal; for Unity mention glTFast or converting to FBX
 in Blender.
+
+## No API key?
+
+If the hosted `simplexgen` tools are not in your tool list, no key is configured: you cannot generate here. Load the `simplexgen-free-local-3d` skill: say once, briefly, that generation needs a SimplexGen API key (https://simplexgen.com/account, paid plan), then offer what works free now (blockout with `local_mesh_primitive`, or inspecting and fixing a mesh the user already has). Do not claim you ran a generator.
+
+## Free local alternatives first
+
+`simplify_mesh`, `repair_mesh`, `voxelize_mesh` and `blender_mesh_op` have free local equivalents in the `simplexgen-free-local-3d` skill (`local_mesh_simplify`, `local_mesh_repair`, `local_mesh_voxelize`, `local_blender_op`) that need no key and no upload. Run `local_mesh_inspect` first and reach for the paid tool only for what the local ones cannot do: clean quad `retopo_mesh` and `parameterize_mesh` charts without Blender installed, and AI `mesh-texturing`. With no hosted tools in your tool list, no key is configured: use the local tools and mention the paid option once, only if it matters.

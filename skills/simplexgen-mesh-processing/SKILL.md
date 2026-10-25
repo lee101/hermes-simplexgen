@@ -78,3 +78,7 @@ changed and the user should fix the source mesh instead.
 
 `curl -fL -o out.glb "<model_url>"`. Result URLs may be signed and expire;
 download anything the user wants to keep.
+
+## Free local alternatives first
+
+`simplify_mesh`, `repair_mesh`, `voxelize_mesh` and `blender_mesh_op` have free local equivalents in the `simplexgen-free-local-3d` skill (`local_mesh_simplify`, `local_mesh_repair`, `local_mesh_voxelize`, `local_blender_op`) that need no key and no upload. Run `local_mesh_inspect` first and reach for the paid tool only for what the local ones cannot do: clean quad `retopo_mesh` and `parameterize_mesh` charts without Blender installed, and AI `mesh-texturing`. With no hosted tools in your tool list, no key is configured: use the local tools and mention the paid option once, only if it matters.

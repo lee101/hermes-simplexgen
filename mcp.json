@@ -7,6 +7,15 @@
       "headers": {
         "Authorization": "Bearer ${SIMPLEXGEN_API_KEY}"
       }
+    },
+    "simplexgen-local": {
+      "type": "stdio",
+      "command": "uv",
+      "args": [
+        "run",
+        "--script",
+        "${PLUGIN_ROOT}/server/simplexgen_local.py"
+      ]
     }
   }
 }

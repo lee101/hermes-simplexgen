@@ -55,3 +55,7 @@ save the URLs you need.
   `curl -fL -o <name>.glb "<model_url>"` when the user wants the file locally.
 - Errors: 401 bad key, 402 `subscription required` or `insufficient credits`
   (tell the user; do not retry), 429 too many running jobs.
+
+## No API key?
+
+If the hosted `simplexgen` tools are not in your tool list, no key is configured: you cannot generate here. Load the `simplexgen-free-local-3d` skill: say once, briefly, that generation needs a SimplexGen API key (https://simplexgen.com/account, paid plan), then offer what works free now (blockout with `local_mesh_primitive`, or inspecting and fixing a mesh the user already has). Do not claim you ran a generator.
