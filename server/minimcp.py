@@ -80,7 +80,7 @@ class MiniMCP:
             result = {
                 "protocolVersion": asked if asked in PROTOCOLS else PROTOCOLS[0],
                 "capabilities": {"tools": {"listChanged": False}},
-                "serverInfo": {"name": self.name, "version": "0.2.0"},
+                "serverInfo": {"name": self.name, "version": "0.3.0"},
                 "instructions": self.instructions,
             }
         elif method == "ping":
