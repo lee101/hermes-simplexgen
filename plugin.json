@@ -1,7 +1,7 @@
 {
   "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "simplexgen",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Generate images and 3D meshes, then simplify, repair, voxelize, texture and search them with SimplexGen's hosted MCP server.",
   "author": {
     "name": "Lee Penkman",

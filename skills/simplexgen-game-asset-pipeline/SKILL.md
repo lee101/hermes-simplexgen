@@ -40,8 +40,9 @@ for hero assets.
 ## 5. Budget and LODs
 
 `simplify_mesh` with `ratio = budget / original_faces` (clamp 0.01-0.99), then
-LODs at 0.5 and 0.25 of that result's source. Use `remeshing` instead when the
-user needs clean, even topology (animation, sculpting).
+LODs at 0.5 and 0.25 of that result's source (1 credit each). Use `retopo_mesh`
+(3 credits) instead when the user needs clean, even quads (animation,
+sculpting), and `parameterize_mesh` (2 credits) for clean UVs before texturing.
 
 ## 6. Deliver
 

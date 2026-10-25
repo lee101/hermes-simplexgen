@@ -19,9 +19,13 @@ hosted MCP server. Ships three skills that teach the agent the workflows.
 | `generate_image` | no | Text to image |
 | `generate_3d` | no | Quick text/image to 3D (GLB) |
 | `run_generation_tool` | no | Any generator: Pixal3D, TRELLIS.2, Hunyuan 3D, Hi3D, Rodin, remeshing, mesh texturing, VRM avatars, terrain |
-| `simplify_mesh` | no | Decimate to a fraction of faces |
-| `repair_mesh` | no | Fix normals, holes, duplicates, degenerate faces |
-| `voxelize_mesh` | no | Voxel version of a mesh |
+| `simplify_mesh` | no | Decimate to a fraction of faces (1 credit) |
+| `repair_mesh` | no | Fix normals, holes, duplicates, degenerate faces (1 credit) |
+| `voxelize_mesh` | no | Voxel version of a mesh (1 credit) |
+| `retopo_mesh` | no | Quad retopology to a target face count, Blender QuadriFlow (3 credits) |
+| `parameterize_mesh` | no | Rectangular surface parameterization: chart-aligned, seam-aware UVs (2 credits) |
+| `rectangular_remesh` | no | Voxel-grid remesh with RSP UVs for stylized hard-surface assets (2 credits) |
+| `blender_mesh_op` | no | Headless Blender ops: bevel, solidify, mirror, weld, uv_smart, ... (1 credit, `info` free) |
 
 **Skills**
 
@@ -47,8 +51,8 @@ Account -> API at <https://simplexgen.com/account> (paid plan required).
   `SIMPLEXGEN_API_KEY` as a Bearer token. Prompts, image URLs and model URLs you
   pass are sent to SimplexGen; generators may forward them to model providers
   (fal.ai, RunPod).
-- **Cost:** generation and texturing tools spend credits on your SimplexGen
-  account (auto top-up applies if you enabled it). The server is declared
+- **Cost:** generation, texturing and mesh tools spend credits on your
+  SimplexGen account (mesh ops 1-3 credits, charged only on success) (auto top-up applies if you enabled it). The server is declared
   `trust: untrusted`, so Hermes asks before every tool not annotated read-only
   and refuses them in unattended runs (cron).
 - **Uploads:** to process a local file the agent asks for a single-use upload
@@ -61,7 +65,7 @@ Account -> API at <https://simplexgen.com/account> (paid plan required).
 ## REST API
 
 The same key works on the REST API (`/api/v1/tools/<slug>`,
-`/api/v1/generate-image`, `/api/v1/generate-3d`, `/api/v1/mesh/{simplify,repair,voxelize}`,
+`/api/v1/generate-image`, `/api/v1/generate-3d`, `/api/v1/mesh/{simplify,repair,voxelize,retopo,parameterize,rectangular-remesh,blender}`,
 `/api/v1/upload`, `/api/v1/upload-url`, `/api/v1/account`). Docs: <https://simplexgen.com/api>.
 
 ## License
